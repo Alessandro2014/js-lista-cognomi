@@ -7,6 +7,12 @@
 
 var printName = document.getElementById("last-name-list");
 
+function myFunction() {
+    list.sort();
+    list.toLowerCase();
+  }
+
+
 var list = ["Bianchi", "Neri", "Rossi", "Gialli" ];
     list.indexOf(nameList);
 var nameList = " ";
@@ -21,9 +27,7 @@ while (i <= list.length) {
     i++;
 }  
 
-function myFunction() {
-    nameList.sort();
-    nameList.toLowerCase();
-  }
-  printName.innerHTML = nameList;
+
+
+  printName.innerHTML = list;
 
