@@ -7,27 +7,20 @@
 
 var printName = document.getElementById("last-name-list");
 
-function myFunction() {
-    list.sort();
-    list.toLowerCase();
-  }
-
-
 var list = ["Bianchi", "Neri", "Rossi", "Gialli" ];
-    list.indexOf(nameList);
-var nameList = " ";
-var userName = prompt("inserisci il tuo cognome").toLowerCase();
+
+var userName = prompt("inserisci il tuo cognome");
     list.push(userName);
+    list.sort();
     console.table(list);
 
-
+var nameList = " ";
 var i = 0;
-while (i <= list.length) {
+while (i < list.length) {
     nameList += "<li>" + list[i] + "</li>";
     i++;
 }  
 
-
-
-  printName.innerHTML = list;
+var positionName = (list.indexOf(userName) + 1);
+printName.innerHTML = nameList.toLocaleLowerCase() + "Il tuo cognome è nella posizione numero: " + positionName;
 
